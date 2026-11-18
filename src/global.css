@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+/* Import Tailwind base styles */
+@import 'tailwindcss';
+@import 'uniwind';
+
+/* Define your theme in CSS (replaces tailwind.config.js) */
+@theme {
+  /* Font families */
+  --font-inter: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --font-family-inter: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --font-family-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+
+  /* Base colors */
+  --color-white: #ffffff;
+  --color-black: #000000;
+
+  /* Brand named colors */
+  --color-navy-950: #101D36;
+  --color-turquoise: #35D0BA;
+
+  /* Charcoal palette */
+  --color-charcoal-50: #F2F2F2;
+  --color-charcoal-100: #E5E5E5;
+  --color-charcoal-200: #C9C9C9;
+  --color-charcoal-300: #B0B0B0;
+  --color-charcoal-400: #969696;
+  --color-charcoal-500: #7D7D7D;
+  --color-charcoal-600: #616161;
+  --color-charcoal-700: #474747;
+  --color-charcoal-800: #383838;
+  --color-charcoal-850: #2E2E2E;
+  --color-charcoal-900: #1E1E1E;
+  --color-charcoal-950: #101D36;
+
+  /* Neutral palette (#777779 base) */
+  --color-neutral-50: #F2F0F2;
+  --color-neutral-100: #E4E2E4;
+  --color-neutral-200: #C8C6C8;
+  --color-neutral-300: #ACABAD;
+  --color-neutral-400: #919093;
+  --color-neutral-500: #777779;
+  --color-neutral-600: #5E5E60;
+  --color-neutral-700: #474649;
+  --color-neutral-800: #303032;
+  --color-neutral-900: #1B1B1D;
+  --color-neutral-950: #131315;
+
+  /* Primary palette (#101D36 base) */
+  --color-primary-50: #EDF0FF;
+  --color-primary-100: #D8E2FF;
+  --color-primary-200: #BAC6E7;
+  --color-primary-300: #9FABCB;
+  --color-primary-400: #8491AF;
+  --color-primary-500: #6B7794;
+  --color-primary-600: #525E7B;
+  --color-primary-700: #3A4762;
+  --color-primary-800: #24304A;
+  --color-primary-900: #0E1B34;
+  --color-primary-950: #101D36;
+
+  /* Secondary palette (#35D0BA base) */
+  --color-secondary-50: #B5FFF0;
+  --color-secondary-100: #6AF9E2;
+  --color-secondary-200: #47DCC6;
+  --color-secondary-300: #35D0BA;
+  --color-secondary-400: #12C0AB;
+  --color-secondary-500: #00A390;
+  --color-secondary-600: #008677;
+  --color-secondary-700: #006B5E;
+  --color-secondary-800: #005046;
+  --color-secondary-900: #003730;
+  --color-secondary-950: #00201B;
+
+  /* Tertiary palette (#2D1900 base) */
+  --color-tertiary-50: #FFEEDE;
+  --color-tertiary-100: #FFDDB8;
+  --color-tertiary-200: #E6C095;
+  --color-tertiary-300: #C9A57C;
+  --color-tertiary-400: #AD8B64;
+  --color-tertiary-500: #91714C;
+  --color-tertiary-600: #765936;
+  --color-tertiary-700: #5C4221;
+  --color-tertiary-800: #432C0D;
+  --color-tertiary-900: #2D1900;
+  --color-tertiary-950: #1B0E00;
+
+  /* Success palette */
+  --color-success-50: #F0FDF4;
+  --color-success-100: #DCFCE7;
+  --color-success-200: #BBF7D0;
+  --color-success-300: #86EFAC;
+  --color-success-400: #4ADE80;
+  --color-success-500: #22C55E;
+  --color-success-600: #16A34A;
+  --color-success-700: #15803D;
+  --color-success-800: #166534;
+  --color-success-900: #14532D;
+
+  /* Warning palette */
+  --color-warning-50: #FFFBEB;
+  --color-warning-100: #FEF3C7;
+  --color-warning-200: #FDE68A;
+  --color-warning-300: #FCD34D;
+  --color-warning-400: #FBBF24;
+  --color-warning-500: #F59E0B;
+  --color-warning-600: #D97706;
+  --color-warning-700: #B45309;
+  --color-warning-800: #92400E;
+  --color-warning-900: #78350F;
+
+  /* Danger palette */
+  --color-danger-50: #FEF2F2;
+  --color-danger-100: #FEE2E2;
+  --color-danger-200: #FECACA;
+  --color-danger-300: #FCA5A5;
+  --color-danger-400: #F87171;
+  --color-danger-500: #EF4444;
+  --color-danger-600: #DC2626;
+  --color-danger-700: #B91C1C;
+  --color-danger-800: #991B1B;
+  --color-danger-900: #7F1D1D;
+
+  /* Semantic colors - using primary for main brand color */
+  --color-background: #ffffff;
+  --color-foreground: #101D36;
+
+  --color-card: #ffffff;
+  --color-card-foreground: #101D36;
+
+  --color-muted: #F2F0F2;
+  --color-muted-foreground: #777779;
+
+  --color-border: #E4E2E4;
+  --color-input: #E4E2E4;
+  --color-ring: #35D0BA;
+
+  --color-destructive: #ef4444;
+  --color-destructive-foreground: #ffffff;
+}
+
+/* Dark mode colors */
+@media (prefers-color-scheme: dark) {
+  @theme {
+    --color-background: #101D36;
+    --color-foreground: #EDF0FF;
+
+    --color-card: #16233B;
+    --color-card-foreground: #EDF0FF;
+
+    --color-muted: #1E2B45;
+    --color-muted-foreground: #9FABCB;
+
+    --color-border: #24304A;
+    --color-input: #24304A;
+  }
+}
+
+/* Custom utilities */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Ensure placeholder colors on web are bright and visible */
+input::placeholder,
+textarea::placeholder {
+  color: #94A3B8 !important;
+  opacity: 1 !important;
+}
+
+/* Base font and input styling for web - enforce Inter universally across all RN Web & HTML elements */
+* {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif !important;
+}
+
+html,
+body,
+#root,
+[dir="auto"],
+[dir="ltr"],
+[dir="rtl"],
+div,
+span,
+p,
+a,
+button,
+input,
+textarea,
+select {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif !important;
+}
+
+/* Ensure inputs, password dots, and autofill on web have white text and teal cursor */
+input,
+textarea,
+input[type="password"],
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="tel"] {
+  color: #FFFFFF !important;
+  -webkit-text-fill-color: #FFFFFF !important;
+  caret-color: #35D0BA !important;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 1000px #14213D inset !important;
+  -webkit-text-fill-color: #FFFFFF !important;
+  box-shadow: 0 0 0 1000px #14213D inset !important;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+/* Remove browser default focus outline/border on inputs */
+input,
+textarea,
+select {
+  outline: none !important;
+}
+
+input:focus,
+input:focus-visible,
+textarea:focus,
+textarea:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+}
